@@ -1,0 +1,65 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Python files
+*.py text diff=python
+*.pyw text diff=python
+*.pyi text diff=python
+requirements.txt text
+Pipfile text
+Pipfile.lock text
+*.toml text
+*.cfg text
+
+# Documentation and config files
+*.md text diff=markdown
+LICENSE text
+*.yml text
+*.yaml text
+*.json text
+.gitignore text
+.gitattributes text
+
+# Game assets and media files (treat as binary)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+
+# Pygame specific files
+*.ttf binary
+*.otf binary
+
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Python virtual environment
+venv/* binary
+.env/* binary
+.venv/* binary
+env/* binary
+
+# IDE configuration
+.vscode/* text
+.idea/* text
+*.sublime-project text
+*.sublime-workspace text
+
+# Specific to your project
+scores.txt text
+highscores.json text
+config.json text
+settings.ini text
+
+# Export ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+tests/* export-ignore
+docs/* export-ignore
