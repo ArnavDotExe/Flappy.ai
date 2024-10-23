@@ -55,7 +55,7 @@ Run the game:
 ```bash
 python flappy_bird.py
 ```
-
+ 
 ### Controls
 
 #### Menu
