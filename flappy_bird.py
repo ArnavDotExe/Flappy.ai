@@ -37,8 +37,8 @@ def draw_menu(selected_option):
     screen.blit(title, title_rect)
 
     # Define the buttons for AI mode and Human mode
-    ai_button = Button(SCREEN_WIDTH // 2 - 100, 300, 200, 50, "Play AI Mode", BLUE)
-    human_button = Button(SCREEN_WIDTH // 2 - 100, 400, 200, 50, "Play Human Mode", RED)
+    ai_button = Button(SCREEN_WIDTH // 2 - 100, 300, 200, 50, "AI Mode", BLUE)
+    human_button = Button(SCREEN_WIDTH // 2 - 100, 400, 200, 50, "Human Mode", RED)
 
     # Draw the buttons
     ai_button.draw(screen, font)
@@ -52,6 +52,7 @@ def draw_menu(selected_option):
 
     return ai_button, human_button
 
+
 def play_human_mode():
     pipe_manager = PipeManager(PIPE_DISTANCE)
     bird = Bird(is_human=True)
@@ -61,9 +62,9 @@ def play_human_mode():
     game_over = False
 
     # Instructions text
-    start_text = font.render("Click to Start!", True, BLACK)
+    start_text = font.render("Press Space or Click to Start!", True, BLACK)
     start_text_rect = start_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
-    controls_text = font.render("Click anywhere to jump", True, BLACK)
+    controls_text = font.render("Press Space or Click to jump", True, BLACK)
     controls_text_rect = controls_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
 
     while True:
@@ -72,7 +73,7 @@ def play_human_mode():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return MENU
-            elif event.type == pygame.MOUSEBUTTONDOWN2:
+            elif event.type == pygame.MOUSEBUTTONDOWN or (event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE):
                 if not game_started:
                     game_started = True
                 elif not game_over:
@@ -129,6 +130,7 @@ def play_human_mode():
                     elif event.type == pygame.KEYDOWN:
                         if event.key == pygame.K_ESCAPE:
                             return MENU
+
 
 def evaluate_population(birds, pipe_manager):
     birds_alive = 0
