@@ -4,6 +4,7 @@ from constants import *
 from button import Button
 from bird import Bird
 from pipe_manager import PipeManager
+import os
 
 # Initialize Pygame
 pygame.init()

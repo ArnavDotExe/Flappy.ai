@@ -3,7 +3,7 @@
 
 An implementation of the classic Flappy Bird game featuring both human-playable mode and an AI agent trained using genetic algorithms. The AI learns to navigate through pipes by evolving its neural network weights across generations.
 
-![Flappy Bird AI Demo](flappy.gif)
+![Flappy Bird AI Demo](resources/flappy.gif)
 
 ## Features
 
@@ -121,7 +121,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests for:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 ## Acknowledgments
 
